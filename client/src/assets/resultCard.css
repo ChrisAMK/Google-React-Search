@@ -1,0 +1,11 @@
+.viewBtn, .saveBtn {
+    float: right;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.resultCardBox {
+    background-color: white;
+    border: black;
+    border-style: solid;
+}

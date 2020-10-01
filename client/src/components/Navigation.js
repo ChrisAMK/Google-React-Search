@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import "../assets/navigation.css"
 
 function Navigation() {
-    return (
-        <nav className="navbar navbar-expand-lg navbar-light">
+  return (
+    <nav className="navbar navbar-expand-lg navbar-light">
       <Link className="navbar-brand" to="/">
         Google Books
       </Link>
@@ -25,7 +25,7 @@ function Navigation() {
         </ul>
       </div>
     </nav>
-    )
+  )
 }
 
 export default Navigation
