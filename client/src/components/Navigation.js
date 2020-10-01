@@ -1,24 +1,25 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "../assets/navigation.css"
 
 function Navigation() {
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <nav className="navbar navbar-expand-lg navbar-light">
       <Link className="navbar-brand" to="/">
-        Wikipedia Searcher
+        Google Books
       </Link>
       <div>
-        <ul className="navbar-nav">
+        <ul className="navbar-nav nav-links">
           <li className="nav-item">
             <Link
-              to="/"
+              to="/search"
             >
-              Home
+              Search
             </Link>
           </li>
           <li className="nav-item">
-            <Link>
-              Sign Up
+            <Link to="/saved">
+              Saved
             </Link>
           </li>
         </ul>
