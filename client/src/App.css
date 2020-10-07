@@ -1,13 +1,19 @@
+* {
+    font-family: 'Balsamiq Sans', cursive;
+}
+
 .searchBox {
     margin-bottom: 30px;
     background-color: lightgray;
     border-radius: 5px;
+    border-style: solid;
 }
 
 .savedBox {
-    background-color: lightgray;
+    background-color: gold;
     padding-bottom: 20px;
     border-radius: 5px;
+    border-style: solid;
 }
 
 .bannerBox {
@@ -17,6 +23,7 @@
     border-radius: 5px;
     font-family: 'Overpass', sans-serif;
     padding-top: 10px; padding-bottom: 10px;
+    border-style: solid;
 }
 
 .resultCardBox {
@@ -25,6 +32,7 @@
     border-style: solid;
     width: 100%;
     margin-bottom: 10px;
+    border-style: solid;
 }
 
 input {
@@ -36,8 +44,10 @@ input {
 }
 
 .resultsBox {
-    background-color: lightgrey;
+    background-color: gold;
     border-radius: 5px;
+    border-style: solid;
+    padding: 10px;
 }
 
 .viewBtn, .saveBtn {
@@ -45,6 +55,7 @@ input {
     margin-top: 10px;
     margin-right: 10px;
     border-radius: 3px;
+    background-color: rgb(255, 105, 105);
 }
 
 .cardTitle, .cardSum, .results, .savedBooks {
@@ -64,7 +75,7 @@ input {
 }
 
 .navbar {
-    background-color: lightgrey;
+    background-color: gold;
     margin-bottom: 30px;
 }
 
