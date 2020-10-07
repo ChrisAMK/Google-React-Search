@@ -27,7 +27,7 @@ module.exports = {
         console.log(req.params)
 
         db.Book
-        .findById({ _id: req.params._id })
+        .findById({ _id: req.params.id })
         .then(deletedBook => deletedBook.remove())
         .then(deletedBook => res.json(deletedBook))
         .catch(err => {

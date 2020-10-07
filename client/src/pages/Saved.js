@@ -14,13 +14,6 @@ function Saved() {
         .catch(err => console.log(err))
     }
 
-    // const deleteBook = ({_id}) => {
-    //     console.log("Hey")
-    //     API.removeBook(_id)
-    //     fetchSavedBooks()
-    //     .catch(err => console.log(err))
-    // }
-
     const deleteBook = async ( _id ) => {
         try {
             await API.removeBook( _id );

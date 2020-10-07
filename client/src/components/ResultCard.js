@@ -1,12 +1,11 @@
 import React from "react";
-import "../assets/resultCard.css";
 import API from "../utils/API";
 
 function ResultCard(props) {
 
     const saveBook = () => {
         API.saveBook(bookData)
-        .then(savedBooks => console.log(savedBooks))
+        .then(savedBooks => console.log(savedBooks + "YO"))
         .catch(err => console.log(err))
     }
 
@@ -39,7 +38,7 @@ function ResultCard(props) {
         <div className="resultCardBox">
             {JsxBtns}
             <h5 className="cardTitle">{props.title}</h5>
-            <h6 className="cardSum">{props.author}</h6>
+            <h6 className="cardSum">{props.author.map(author => `${author}, `)}</h6>
             <div className="row">
                 <div className="col-3">
                     <img src={props.image} alt="" className="cardImage"></img>

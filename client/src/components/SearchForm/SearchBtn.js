@@ -2,7 +2,7 @@ import React from "react";
 
 const SearchBtn = React.forwardRef((props, ref) => {
     return (
-        <button {...props}>Search</button>
+        <button {...props} style={{marginBottom: "10px", marginTop: "10px"}}>Search</button>
     )
 })
 

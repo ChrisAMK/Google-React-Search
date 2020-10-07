@@ -1,6 +1,5 @@
 import React from "react";
 import ResultCard from "./ResultCard";
-import "../assets/saved.css";
 
 function SavedComp(props) {
 
@@ -22,13 +21,11 @@ function SavedComp(props) {
         )
     }
 
-
     return(
 
-    
         <div className="row savedBox">
             <div className="col-12">
-                <h6>HEY</h6>
+                <h6 className="savedBooks">Saved Books: </h6>
                 {
                 books.map((book, key) => (
                     generateResults(book, key)

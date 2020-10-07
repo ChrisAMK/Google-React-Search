@@ -3,8 +3,8 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
 import Navigation from "./components/Navigation";
 import Banner from "./components/Banner";
-
-import Search from "./pages/Search"
+import NoMatch from "./pages/NoMatch";
+import Search from "./pages/Search";
 import Saved from "./pages/Saved";
 
 
@@ -20,6 +20,10 @@ function App() {
         <Banner />
           <Switch>
 
+            <Route exact path="/">
+              <Search />
+            </Route>
+
             <Route exact path="/search">
               <Search />
             </Route>
@@ -29,7 +33,7 @@ function App() {
             </Route>
 
             <Route path="/">
-              <Search />
+              <NoMatch />
             </Route>
 
           </Switch>
