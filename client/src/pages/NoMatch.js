@@ -1,5 +1,6 @@
 import React from "react";
 
+// This function is rendered when the user enters an incorrect URL
 function FourOhFour() {
     return(
         <div className="noMatch" >

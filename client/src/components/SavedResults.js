@@ -3,8 +3,7 @@ import ResultCard from "./ResultCard";
 
 function SavedComp(props) {
 
-    const books = props.books
-
+    // Generate Is the same helper function that returns the Result card component with each array iterations props
     const generateResults = (book, key) => {
         return (
             <ResultCard 
@@ -27,7 +26,7 @@ function SavedComp(props) {
             <div className="col-12">
                 <h6 className="savedBooks">Saved Books: </h6>
                 {
-                books.map((book, key) => (
+                props.books.map((book, key) => (
                     generateResults(book, key)
                 ))
             }

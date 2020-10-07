@@ -11,7 +11,7 @@ import Saved from "./pages/Saved";
 
 function App() {
 
-
+// here is the pathing for the whole app we use react router Switch and Routes to make it possible to navigate the site
   return (
     <React.Fragment>
       <Router>

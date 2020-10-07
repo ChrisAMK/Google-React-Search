@@ -4,43 +4,19 @@
     border-radius: 5px;
 }
 
-input {
-    width: 100%;
-}
-
-.bookSearch {
-    margin-top: 10px;
-}
-
-button {
-    float: right;
-    margin-top: 10px;
-}
-
 .savedBox {
     background-color: lightgray;
     padding-bottom: 20px;
     border-radius: 5px;
 }
 
-.savedBooks {
-    margin-top: 15px;
-}
-
-.resultsBox {
-    background-color: lightgrey;
+.bannerBox {
+    margin-bottom: 30px;
+    background-color: lightgray;
+    text-align: center;
     border-radius: 5px;
-}
-
-.results {
-    margin-top: 10px;
-}
-
-.viewBtn, .saveBtn {
-    float: right;
-    margin-top: 10px;
-    margin-right: 10px;
-    border-radius: 3px;
+    font-family: 'Overpass', sans-serif;
+    padding-top: 10px; padding-bottom: 10px;
 }
 
 .resultCardBox {
@@ -51,7 +27,27 @@ button {
     margin-bottom: 10px;
 }
 
-.cardTitle, .cardSum {
+input {
+    width: 100%;
+}
+
+.bookSearch {
+    margin-top: 10px;
+}
+
+.resultsBox {
+    background-color: lightgrey;
+    border-radius: 5px;
+}
+
+.viewBtn, .saveBtn {
+    float: right;
+    margin-top: 10px;
+    margin-right: 10px;
+    border-radius: 3px;
+}
+
+.cardTitle, .cardSum, .results, .savedBooks {
     margin-left: 10px;
     margin-top: 10px;
 }
@@ -70,15 +66,6 @@ button {
 .navbar {
     background-color: lightgrey;
     margin-bottom: 30px;
-}
-
-.bannerBox {
-    margin-bottom: 30px;
-    background-color: lightgray;
-    text-align: center;
-    border-radius: 5px;
-    font-family: 'Overpass', sans-serif;
-    padding-top: 10px; padding-bottom: 10px;
 }
 
 .noMatch {

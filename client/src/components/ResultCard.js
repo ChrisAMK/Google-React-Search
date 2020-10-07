@@ -3,16 +3,16 @@ import API from "../utils/API";
 
 function ResultCard(props) {
 
+    // SaveBook uses the API saveBook function to store the book in our MongoDB database
     const saveBook = () => {
         API.saveBook(bookData)
-        .then(savedBooks => console.log(savedBooks + "YO"))
+        .then(savedBooks => console.log(savedBooks))
         .catch(err => console.log(err))
     }
 
-    console.log(props)
-
+    // This function is checks if the Card component is being rendered for a saved Book or searched book
+    // If is is a saved book, the code for the save button is replaced with the delete button
     const buttonChecker = () => {
-
         if (props.saved) {
             let buttons = <React.Fragment><button className="viewBtn"><a href={props.link} target="_blank" rel="noopener noreferrer">View</a></button><button className="saveBtn" onClick={() => props.deleteBook(bookData._id)}>Delete</button></React.Fragment>
             return buttons
@@ -21,9 +21,10 @@ function ResultCard(props) {
             return buttons
         }
     }
-
+    // creating a variable to hold the return value of buttonChecker to be used in JSX
     const JsxBtns = buttonChecker()
-
+    
+    // Creating a const for easy access to send data to the Database
     const bookData = {
         _id: props.id,
         title: props.title,

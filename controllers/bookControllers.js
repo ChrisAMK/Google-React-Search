@@ -1,8 +1,9 @@
 const db = require("../models");
 
+// everything in this file is wrapped in the module.export function
 module.exports = {
-    create: function(req, res) {
-        console.log(req.body)
+    // create function takes in the request infomation and sends it to the mongoose database
+    create: (req, res) => {
         db.Book.create(req.body)
         .then(bookModel => res.json(bookModel))
         .catch(err => {
@@ -10,8 +11,8 @@ module.exports = {
             res.status(422).json(err)
         });
     },
-
-    findAll: function(req, res) {
+    // FindAll queries the mongoose database and returns it to the res.json
+    findAll: (req, res) => {
         db.Book
         .find(req.query)
         .sort({ date: -1 })
@@ -21,11 +22,8 @@ module.exports = {
             res.status(422).json(err)
         });
     },
-
-    delete: function(req, res) {
-
-        console.log(req.params)
-
+    // Delete takes in the request parameter's id and uses that id to delete an entry for the database
+    delete: (req, res) => {
         db.Book
         .findById({ _id: req.params.id })
         .then(deletedBook => deletedBook.remove())

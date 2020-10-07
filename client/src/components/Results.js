@@ -3,26 +3,20 @@ import ResultCard from "./ResultCard"
 
 function Results(props) {
 
-
-    const books = props.books
-
-
+    // Generate Results is a function that returns the Result Card multiple times with the infomation of each array item
     const generateResults = (book, key) => {
         return (
-
             <ResultCard 
                 id={book.id}
-                author={(!("authors" in book.volumeInfo) ? "No Authors" : book.volumeInfo.authors)}
+                author={(!("authors" in book.volumeInfo) ? ["No Authors"] : book.volumeInfo.authors)}
                 title={book.volumeInfo.title}
                 description={book.volumeInfo.description}
                 image={(!("imageLinks" in book.volumeInfo) ? "https://via.placeholder.com/150" : book.volumeInfo.imageLinks.smallThumbnail)}
                 link={book.volumeInfo.infoLink}
                 key={key}
-
             />
         )
     }
-
 
     return(
 
@@ -31,7 +25,7 @@ function Results(props) {
                 <h5 className="results">Results</h5>
             </div>
             {
-                books.map((book, key) => (
+                props.books.map((book, key) => (
                     generateResults(book, key)
                 ))
             }
